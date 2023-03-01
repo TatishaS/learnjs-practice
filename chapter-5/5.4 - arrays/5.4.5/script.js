@@ -1,11 +1,11 @@
 function getMaxSubSum(arr) {
   let maxSum = 0;
-  let partialSum = 0;
+  let subarraySum = 0;
 
   for (let item of arr) {
-    partialSum += item;
-    maxSum = Math.max(maxSum, partialSum);
-    if (partialSum < 0) partialSum = 0;
+    subarraySum += item;
+    maxSum = Math.max(maxSum, subarraySum);
+    if (subarraySum < 0) subarraySum = 0;
   }
 
   return maxSum;
